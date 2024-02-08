@@ -1,24 +1,31 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 #app {
   height: 100vh;
   display: grid;
   grid-template-columns: 248px 1fr;
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 96px 1fr;
   grid-template-areas:
     'side header'
     'side main';
+  font-family: 'Hind', sans-serif;
 }
 .header {
-  background-color: #fff;
   grid-area: header;
 }
 
 .sidebar {
-  background-color: #1c1f23;
+  background-color: var(--theme-white);
   grid-area: side;
+  padding: 40px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 .main {
   background-color: var(--theme-background);
   grid-area: main;
+  padding: 20px;
 }
