@@ -2,8 +2,9 @@
 :root {
   --theme-background: #c3c5ca;
   --theme-white: #fff;
+  --theme-font-green: #12a188;
+  --theme-font-gray: #929fa6;
 }
-
 
 *,
 *::before,
