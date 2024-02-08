@@ -14,7 +14,7 @@
     </div>
 
     <div class="sidebar-items">
-      <IconLogout /> <span>Logout {{ isTrue }}</span>
+      <IconLogout /> <span>Logout</span>
     </div>
   </section>
 </template>
@@ -38,15 +38,16 @@ img {
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
-  padding: 15px;
+  padding: 10px;
+  margin-top: 15px;
 }
 
 .sidebar-items span {
-  margin-left: 5px;
+  margin-left: 12px;
 }
 
 .sidebar-items:hover {
-  background: #e1f2ef;
+  background: var(--theme-background-green);
   border-radius: 8px;
   color: var(--theme-font-green);
 }
