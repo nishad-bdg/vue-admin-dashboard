@@ -1,30 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --theme-background: #c3c5ca;
+  --theme-background: #e9edef;
   --theme-background-green: #e1f2ef;
   --theme-background-menu: #dadfe1;
   --theme-background-border: #eaecf0;
-  --theme-white: #fff;
-  --theme-font-green: #12a188;
-  --theme-font-gray: #929fa6;
-  --theme-font-sub-heading: #3e545e;
-  --theme-font-gray-600: #1e4354;
-}
-@font-face {
-  font-family: 'hind';
-  src: url('@/assets/fonts/Hind/Hind-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'open-sans-bold';
-  src: url('@/assets/fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'open-sans';
-  src: url('@/assets/fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 400;
+  --theme-text-white: #fff;
+  --theme-text-green: #12a188;
+  --theme-text-gray: #929fa6;
+  --theme-text-sub-heading: #3e545e;
+  --theme-text-gray-600: #1e4354;
+  --theme-text-gray-500: #6b7280;
+  --theme-text-gray-200: #e5e7eb;
 }
 
 *,
@@ -40,5 +30,5 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: hind;
+  font-family: 'Hind', sans-serif;
 }

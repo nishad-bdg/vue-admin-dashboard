@@ -50,7 +50,7 @@ import IconUser from './icons/IconUser.vue'
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--theme-font-sub-heading);
+  color: var(--theme-text-sub-heading);
   margin: 5px 0 0 10px;
   column-gap: 5px;
   font-family: 'Hind', sans-serif;
@@ -59,6 +59,6 @@ import IconUser from './icons/IconUser.vue'
 }
 
 .sub-menu-link:hover{
-    color: var(--theme-font-green);
+    color: var(--theme-text-green);
 }
 </style>

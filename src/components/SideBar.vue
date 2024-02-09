@@ -1,7 +1,7 @@
 <template>
   <section class="sidebar">
     <div class="sidebar-container">
-      <img src="@/assets/icons/logo.webp" class="logo" />
+      <img src="@/assets/icons/logo.webp" class="logo" alt="logo" />
       <div
         :class="`sidebar-items ${activeMenu === 'overview' && 'active'}`"
         @click="activeMenu = 'overview'"
@@ -44,7 +44,7 @@ img {
 .sidebar-items {
   display: flex;
   align-items: center;
-  color: var(--theme-font-gray);
+  color: var(--theme-text-gray);
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -59,12 +59,12 @@ img {
 .sidebar-items:hover {
   background: var(--theme-background-green);
   border-radius: 8px;
-  color: var(--theme-font-green);
+  color: var(--theme-text-green);
 }
 
 .sidebar-items.active {
   background: var(--theme-background-green);
   border-radius: 8px;
-  color: var(--theme-font-green);
+  color: var(--theme-text-green);
 }
 </style>

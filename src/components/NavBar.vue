@@ -7,7 +7,7 @@
 
       <div class="nav-items" @click="showDropdown = !showDropdown">
         <div class="user-info">
-          <img src="@/assets/images/avatar.webp" />
+          <img src="@/assets/images/avatar.webp" alt="user-avatar" />
           <p><span>Hi,</span> Monir</p>
           <IconArrowDown />
           <div class="nva-items">
@@ -53,14 +53,15 @@ const showDropdown = ref(false)
   flex: row;
   align-items: center;
   column-gap: 10px;
-  font-weight: bold;
-  font-family: open-sans-bold !important;
+  font-weight: 700;
   font-size: 19.34px !important;
   line-height: 29.01px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .user-info p span {
-  font-family: open-sans !important;
+  font-weight: 400;
 }
 
 .avatar {
