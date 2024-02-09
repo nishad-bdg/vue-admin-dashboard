@@ -17,6 +17,10 @@
   --theme-text-gray-200: #e5e7eb;
 }
 
+:root {
+  --border-radius-md: 8px;
+}
+
 *,
 *::before,
 *::after {
