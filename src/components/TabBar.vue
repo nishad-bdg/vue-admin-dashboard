@@ -11,16 +11,16 @@
         {{ tab.title }}
       </div>
     </div>
-    <div class="tab-content">
-    </div>
+    <div class="tab-content"></div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 const emit = defineEmits(['currentTab'])
 
-defineProps({
+const props = defineProps({
   tabs: {
     type: Array,
     default: () => [],
@@ -34,6 +34,15 @@ const activateTab = (index) => {
   activeTab.value = index
   emit('currentTab', index)
 }
+
+const route = useRoute()
+
+watch(
+  () => route.name,
+  (newValue) => {
+    activateTab(props.tabs.findIndex((x) => x.routeName === newValue))
+  }
+)
 </script>
 
 <style scoped>

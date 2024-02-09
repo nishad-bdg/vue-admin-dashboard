@@ -16,6 +16,7 @@ const tabs = [
     routeName: 'comparePlans'
   }
 ]
+
 const onCurrentTab = (index) => {
   const routeName = tabs[index].routeName
   router.push({ name: routeName })
