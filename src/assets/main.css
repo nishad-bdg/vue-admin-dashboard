@@ -1,5 +1,4 @@
 @import './base.css';
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500,600,700&display=swap');
 #app {
   height: 100vh;
   display: grid;
@@ -8,10 +7,13 @@
   grid-template-areas:
     'side header'
     'side main';
-  font-family: 'Hind', sans-serif;
 }
 .header {
   grid-area: header;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--theme-background);
+  color: var(--theme-font-gray-600);
+  padding: 16px;
 }
 
 .sidebar {
@@ -26,5 +28,5 @@
 .main {
   background-color: var(--theme-background);
   grid-area: main;
-  padding: 20px;
+  padding: 16px;
 }
