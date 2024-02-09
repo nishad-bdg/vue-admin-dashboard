@@ -1,7 +1,7 @@
 <template>
   <section class="sidebar">
     <div class="sidebar-container">
-      <img src="../assets/icons/logo.webp" class="logo" />
+      <img src="@/assets/icons/logo.webp" class="logo" />
       <div
         :class="`sidebar-items ${activeMenu === 'overview' && 'active'}`"
         @click="activeMenu = 'overview'"
