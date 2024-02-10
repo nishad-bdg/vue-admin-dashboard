@@ -239,7 +239,7 @@ tr {
   padding-left: 40px;
   border: 1px solid var(--theme-background-border);
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
 }
 
