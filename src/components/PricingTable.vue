@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing-table" :class="[active && 'active']">
+  <div class="pricing-table" :class="{'active': active}">
     <div class="table-header">
       <h2>{{ plan }}</h2>
       <p>{{ amount }}</p>
