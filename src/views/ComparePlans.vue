@@ -88,6 +88,7 @@ watch(
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  padding: 2.5rem 0;
 }
 
 .card-header {
@@ -113,6 +114,6 @@ watch(
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 </style>
