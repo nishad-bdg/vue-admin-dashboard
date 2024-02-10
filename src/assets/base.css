@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
@@ -9,6 +10,9 @@
   --theme-background-menu: #dadfe1;
   --theme-background-border: #eaecf0;
   --theme-background-table: #f2f5f5;
+  --theme-background-approved: #eaf7ed;
+  --theme-background-rejected: #fcebed;
+  --theme-background-pending: #fff9e7;
   --theme-text-white: #fff;
   --theme-text-green: #12a188;
   --theme-text-gray: #929fa6;
@@ -16,6 +20,9 @@
   --theme-text-gray-600: #1e4354;
   --theme-text-gray-500: #6b7280;
   --theme-text-gray-200: #e5e7eb;
+  --theme-text-approved: #12b76a;
+  --theme-text-rejected: #dc3545;
+  --theme-text-pending: #f6b100;
 }
 
 :root {

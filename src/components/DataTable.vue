@@ -30,7 +30,14 @@
       <tbody>
         <tr v-for="row in paginatedData" :key="row.id">
           <td v-for="column in columns" :key="column.key">
-            {{ row[column.key] }}
+            <span v-if="column.key !== 'action' && column.key !== 'status'">
+              {{ row[column.key] }}
+            </span>
+            
+            <span v-if="column.key === 'status'">
+              <Badge :status="row[column.key]" />
+            </span>
+            <span v-if="column.key === 'action'"><IconTableDownload style="cursor: pointer" /></span>
           </td>
         </tr>
       </tbody>
@@ -51,6 +58,8 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import IconTableDownload from '@/components/icons/IconTableDownload.vue'
+import Badge from './Badge.vue'
 
 const props = defineProps({
   data: {
