@@ -12,7 +12,7 @@ export const PLANS = [
 ]
 
 export const TABLE_COLUMNS = [
-  { key: 'date', label: 'Date' },
+  { key: 'date', label: 'Date', sortable: true },
   { key: 'amount', label: 'Amount', sortable: true },
   { key: 'plan', label: 'Plan' },
   { key: 'paymentType', label: 'Payment Type' },
