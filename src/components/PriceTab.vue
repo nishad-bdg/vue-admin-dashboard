@@ -64,7 +64,7 @@ const tabClick = (index) => {
 
 .tabs-container span {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 14px;
   font-weight: 500;
 }
 </style>

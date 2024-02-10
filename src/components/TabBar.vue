@@ -66,7 +66,7 @@ watch(
 
 .tab-content {
   margin-top: -1px;
-  background: #e4e6ea;
+  background: var(--theme-background-tab);
   height: 1px;
 }
 </style>
