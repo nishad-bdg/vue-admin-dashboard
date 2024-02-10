@@ -19,22 +19,11 @@
         :title="item.title"
         :facilities="item.facilities"
         :active="index === activeTable"
-        @mouseover="activeTable = index"
-        @mouseleave="activeTable = 1"
       >
-        <CustomButton
-          v-if="index === 1"
-          variant="primary"
-          :size="index === activeTable ? 'xlarge' : 'large'"
-          disabled
+        <CustomButton v-if="index === 1" variant="primary" size="xlarge" disabled
           >Current</CustomButton
         >
-        <CustomButton
-          v-if="index === 2"
-          variant="primary"
-          :size="index === activeTable ? 'xlarge' : 'large'"
-          >Upgrade</CustomButton
-        >
+        <CustomButton v-if="index === 2" variant="primary" size="large">Upgrade</CustomButton>
       </PricingTable>
     </div>
   </Card>

@@ -50,13 +50,13 @@ defineProps({
   align-items: center;
   padding-bottom: 20px;
   cursor: pointer;
+  box-shadow: 1px 1px 10px 0px var(--theme-text-gray-600);
 }
 
 .pricing-table .active {
   width: 370px;
   height: 692px;
   border: 2px solid var(--theme-text-green);
-  transition: width 0.3s, height 0.4s;
 }
 
 .pricing-table .active .table-header {
