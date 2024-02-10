@@ -10,7 +10,7 @@
           <img src="@/assets/images/avatar.webp" alt="user-avatar" width="40" height="40" />
           <p><span>Hi,</span> Monir</p>
           <IconArrowDown />
-          <div class="nva-items">
+          <div class="nav-items">
             <DropdownMenu v-show="showDropdown" />
           </div>
         </div>
