@@ -46,7 +46,9 @@
     </table>
 
     <div class="pagination">
-      <div class="results">Showing 1 to 20 of 77 entries</div>
+      <div class="results">
+        Showing {{ startEntry }} to {{ endEntry }} of {{ totalEntries }} entries
+      </div>
       <div>
         <button :disabled="currentPage === 1" @click="currentPage -= 1" class="btnPagination">
           Previous
@@ -87,15 +89,31 @@ const props = defineProps({
     type: Array,
     default: () => [],
     required: true
+  },
+  perPageOptions: {
+    type: Array,
+    default: () => [5, 10, 20]
   }
 })
 
-const perPageOptions = [5, 10, 20]
-const perPage = ref(perPageOptions[0])
+const perPage = ref(props.perPageOptions[0])
 const searchQuery = ref('')
 const sortColumn = ref(null)
 const sortOrder = ref('asc')
 const currentPage = ref(1)
+
+const startEntry = computed(() => {
+  return (currentPage.value - 1) * perPage.value + 1
+})
+
+const endEntry = computed(() => {
+  const end = currentPage.value * perPage.value
+  return end > props.data.length ? props.data.length : end
+})
+
+const totalEntries = computed(() => {
+  return props.data.length
+})
 
 const sortBy = (column) => {
   if (sortColumn.value === column) {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <CurrentPlan :plans1="plans1" :plans2="plans2" @upgradePlanClicked="onClick" />
-    <RechargeHistory :tableData="tableData" :columns="columns" />
+    <RechargeHistory :tableData="tableData" :columns="columns" :perPageOptions="PER_PAGE_OPTIONS" />
   </div>
 </template>
 
@@ -10,6 +10,7 @@ import router from '@/router'
 import CurrentPlan from '@/components/CurrentPlan.vue'
 import RechargeHistory from '@/components/RechargeHistory.vue'
 import { useRechargeHistoryStore } from '@/stores/rechargeHistory'
+import { PER_PAGE_OPTIONS } from '@/constants/global'
 import { ref } from 'vue'
 
 const plans = [

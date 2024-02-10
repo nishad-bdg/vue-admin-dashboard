@@ -7,7 +7,7 @@
         <span>Download All</span>
       </button>
     </div>
-    <DataTable :data="tableData" :columns="columns" />
+    <DataTable :data="tableData" :columns="columns" :perPageOptions="perPageOptions" />
   </Card>
 </template>
 
@@ -25,6 +25,10 @@ defineProps({
   columns: {
     type: Array,
     default: () => [],
+    required: true
+  },
+  perPageOptions: {
+    type: Array,
     required: true
   }
 })
