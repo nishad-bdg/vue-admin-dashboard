@@ -113,5 +113,6 @@ watch(
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 </style>
