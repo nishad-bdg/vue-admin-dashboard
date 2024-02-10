@@ -1,45 +1,48 @@
 [
-    {
-      "plan": "Basic",
-      "amount": "0 USD /Year",
-      "title": "It’s Free, Try out skills-based hiring From Now.",
-      "facilities": [
-        "5 Assessment Invitations Per Month",
-        "Change Plan for extra Candidates",
-        "Standard Test Library",
-        "Custom Test Configuration",
-        "Realistic Simulation Tests",
-        "Validated Content",
-        "24/7 Live Support"
-      ]
-    },
-    {
-      "plan": "Premium",
-      "amount": "1000 USD /Year",
-      "title": "Great for Medium teams looking to hire best talent, faster.",
-      "facilities": [
-        "5 Assessment Invitations Per Month",
-        "Change Plan for extra Candidates",
-        "Standard Test Library",
-        "Custom Test Configuration",
-        "Realistic Simulation Tests",
-        "Validated Content",
-        "24/7 Live Support"
-      ]
-    },
-    {
-      "plan": "Business",
-      "amount": "4800 USD /Year",
-      "title": "Great for Bigger teams looking to hire best talent, faster.",
-      "facilities": [
-        "5 Assessment Invitations Per Month",
-        "Change Plan for extra Candidates",
-        "Standard Test Library",
-        "Custom Test Configuration",
-        "Realistic Simulation Tests",
-        "Validated Content",
-        "24/7 Live Support"
-      ]
-    }
-  ]
-  
+  {
+    "plan": "Basic",
+    "amount": "0 USD /Year",
+    "title": "It’s Free, Try out skills-based hiring From Now.",
+    "facilities": [
+      "5 Assessment Invitations Per Month",
+      "Change Plan for extra Candidates",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support"
+    ]
+  },
+  {
+    "plan": "Premium",
+    "amount": "1000 USD /Year",
+    "title": "Great for Medium teams looking to hire best talent, faster.",
+    "facilities": [
+      "100 Assessment Invitations Per Year",
+      "$1 for an extra Invitation",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support",
+      "Custom Content with Editor",
+      "Customized Branding"
+    ]
+  },
+  {
+    "plan": "Business",
+    "amount": "4800 USD /Year",
+    "title": "Great for Bigger teams looking to hire best talent, faster.",
+    "facilities": [
+      "500 Assessment Invitations Per Year",
+      "$1 for an extra Invitation",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support",
+      "Custom Content with Editor",
+      "Customized Branding"
+    ]
+  }
+]

@@ -103,7 +103,6 @@ defineProps({
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   flex-grow: 1;
 }
 
