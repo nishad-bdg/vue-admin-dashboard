@@ -19,11 +19,15 @@
     <table>
       <thead>
         <tr>
-          <th v-for="column in columns" :key="column.key" @click="sortBy(column.key)">
-            {{ column.label }}
-            <span v-if="sortColumn === column.key">
-              {{ sortOrder === 'asc' ? '▲' : '▼' }}
-            </span>
+          <th
+            v-for="column in columns"
+            :key="column.key"
+            @click="column.sortable && sortBy(column.key)"
+          >
+            <div class="table-head">
+              {{ column.label }}
+              <IconSort v-if="column.sortable" />
+            </div>
           </th>
         </tr>
       </thead>
@@ -78,6 +82,7 @@
 import { ref, computed } from 'vue'
 import IconTableDownload from '@/components/icons/IconTableDownload.vue'
 import Badge from './Badge.vue'
+import IconSort from './IconSort.vue'
 
 const props = defineProps({
   data: {
@@ -288,5 +293,11 @@ tr {
   color: var(--theme-text-green);
   border-radius: 7px;
   padding: 8px 12px;
+}
+
+.table-head {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
 }
 </style>

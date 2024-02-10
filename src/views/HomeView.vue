@@ -35,10 +35,10 @@ const tableData = rechargeStore.data
 
 const columns = ref([
   { key: 'date', label: 'Date' },
-  { key: 'amount', label: 'Amount' },
+  { key: 'amount', label: 'Amount', sortable: true },
   { key: 'plan', label: 'Plan' },
   { key: 'paymentType', label: 'Payment Type' },
-  { key: 'transactionId', label: 'Transaction ID' },
+  { key: 'transactionId', label: 'Transaction ID', sortable: true },
   { key: 'status', label: 'Status' },
   { key: 'action', label: 'Action' }
 ])
