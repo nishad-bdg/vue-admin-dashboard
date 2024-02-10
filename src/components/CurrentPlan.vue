@@ -63,6 +63,11 @@ const onClick = () => {
   flex-wrap: wrap;
   margin-top: 20px;
 }
+
+.card-title {
+  font-weight: 600;
+  font-size: 24px;
+}
 .card-header {
   font-weight: 600;
   font-size: 24px;

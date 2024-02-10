@@ -45,6 +45,11 @@ defineProps({
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
+.card-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
 .outline-btn {
   width: 140px;
   height: 42px;
