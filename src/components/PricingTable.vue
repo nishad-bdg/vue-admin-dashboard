@@ -50,7 +50,9 @@ defineProps({
   align-items: center;
   padding-bottom: 20px;
   cursor: pointer;
-  box-shadow: 1px 1px 20px 0px var(--theme-text-gray-600);
+  -webkit-box-shadow: 10px 10px 33px 4px rgba(107, 114, 128, 0.56);
+  -moz-box-shadow: 10px 10px 33px 4px rgba(107, 114, 128, 0.56);
+  box-shadow: 10px 10px 33px 4px rgba(107, 114, 128, 0.56);
 }
 
 .pricing-table .active {
