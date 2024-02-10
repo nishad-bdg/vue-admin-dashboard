@@ -38,6 +38,11 @@ import IconUser from './icons/IconUser.vue'
   border: 1px solid var(--theme-background-border);
 }
 
+.sub-menu p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .sub-menu hr {
   border: 0;
   height: 1px;
@@ -58,7 +63,7 @@ import IconUser from './icons/IconUser.vue'
   column-gap: 10px;
 }
 
-.sub-menu-link:hover{
-    color: var(--theme-text-green);
+.sub-menu-link:hover {
+  color: var(--theme-text-green);
 }
 </style>
