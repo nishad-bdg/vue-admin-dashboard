@@ -37,7 +37,7 @@ const showDropdown = ref(false)
   display: flex;
   align-items: center;
   justify-content: end;
-  column-gap: 40px;
+  gap: 25px;
 }
 
 .nav-items {
