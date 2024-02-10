@@ -84,9 +84,10 @@ const onClick = () => {
 .amount {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   column-gap: 20px;
+  flex: 1;
 }
 
 .amount h2 {
@@ -109,6 +110,7 @@ const onClick = () => {
   column-gap: 10px;
   border-left: 1px solid var(--theme-background-menu);
   padding-left: 10px;
+  flex: 1;
 }
 
 .background-card3 {
