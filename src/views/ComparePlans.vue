@@ -112,6 +112,6 @@ watch(
 .pricing-table {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 </style>
