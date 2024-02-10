@@ -1,12 +1,14 @@
 <template>
   <div>
     <CurrentPlan :plans1="plans1" :plans2="plans2" @upgradePlanClicked="onClick" />
+    <RechargeHistory />
   </div>
 </template>
 
 <script setup>
 import router from '@/router'
 import CurrentPlan from '@/components/CurrentPlan.vue'
+import RechargeHistory from '@/components/RechargeHistory.vue';
 
 const plans = [
   '5 Assessment Invitations Per Month',
