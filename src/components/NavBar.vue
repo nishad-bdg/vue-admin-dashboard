@@ -5,7 +5,7 @@
         <IconQuestion />
       </div>
 
-      <div class="nav-items" @click="showDropdown = !showDropdown">
+      <div class="nav-items" @click="showDropdown = !showDropdown" ref="wrapper">
         <div class="user-info">
           <img src="@/assets/images/avatar.webp" alt="user-avatar" width="40" height="40" />
           <p><span>Hi,</span> Monir</p>
@@ -23,9 +23,22 @@
 import DropdownMenu from '@/components/DropdownMenu.vue'
 import IconQuestion from './icons/IconQuestion.vue'
 import IconArrowDown from './icons/IconArrowDown.vue'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const showDropdown = ref(false)
+const wrapper = ref(null)
+
+onMounted(() => {
+  const handleClickOutside = (event) => {
+    if (wrapper.value && !wrapper.value.contains(event.target)) {
+      showDropdown.value = false
+    }
+  }
+  document.addEventListener('click', handleClickOutside)
+  return () => {
+    document.removeEventListener('click', handleClickOutside)
+  }
+})
 </script>
 
 <style scoped>
