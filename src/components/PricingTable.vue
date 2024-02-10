@@ -55,6 +55,10 @@ defineProps({
   box-shadow: 10px 10px 33px 4px rgba(107, 114, 128, 0.56);
 }
 
+.pricing-table:hover {
+  border: 2px solid var(--theme-text-green);
+}
+
 .pricing-table .active {
   width: 370px;
   height: 692px;
