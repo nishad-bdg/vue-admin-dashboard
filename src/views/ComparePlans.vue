@@ -6,20 +6,39 @@
     </div>
 
     <div class="tabs">
-      <PriceTab :items="itemsCurrency" :gap="5" />
+      <PriceTab :items="itemsCurrency" :gap="3" />
       <PriceTab :items="itemsPeriod" />
     </div>
 
-    <div>Price Table</div>
+    <div class="pricing-table">
+      <PricingTable
+        v-for="(item, index) in pricingDataItems"
+        :key="index"
+        :plan="item.plan"
+        :amount="item.amount"
+        :title="item.title"
+        :facilities="item.facilities"
+        :active="index === activeTable"
+        @mouseover="activeTable = index"
+        @mouseleave="activeTable = 1"
+      />
+    </div>
   </Card>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import Card from '@/components/Card.vue'
 import PriceTab from '@/components/PriceTab.vue'
-import { ref } from 'vue'
+import PricingTable from '@/components/PricingTable.vue'
+import { pricingTableStore } from '@/stores/pricingTable'
+
 const itemsCurrency = ref([{ label: 'BDT' }, { label: 'USD' }])
 const itemsPeriod = ref([{ label: 'Monthly' }, { label: 'Yearly' }])
+
+const pricingTableStoreData = pricingTableStore()
+const pricingDataItems = pricingTableStoreData.data
+const activeTable = ref(1)
 </script>
 
 <style scoped>
@@ -29,7 +48,6 @@ const itemsPeriod = ref([{ label: 'Monthly' }, { label: 'Yearly' }])
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
 }
 
 .card-header {
@@ -49,5 +67,10 @@ const itemsPeriod = ref([{ label: 'Monthly' }, { label: 'Yearly' }])
 .tabs {
   display: flex;
   gap: 20px;
+}
+.pricing-table {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 </style>

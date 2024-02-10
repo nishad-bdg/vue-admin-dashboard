@@ -4,7 +4,7 @@
       v-for="(item, index) in items"
       :key="index"
       :class="{ active: activeIndex === index }"
-      @click="activeIndex = index"
+      @click="tabClick(index)"
     >
       <span>{{ item.label }}</span>
     </button>
@@ -26,7 +26,14 @@ defineProps({
   }
 })
 
+const emit = defineEmits(['tabClick'])
+
 const activeIndex = ref(0)
+
+const tabClick = (index) => {
+  activeIndex.value = index
+  emit('tabClick', index)
+}
 </script>
 
 <style scoped>

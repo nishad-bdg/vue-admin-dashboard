@@ -1,0 +1,44 @@
+[
+  {
+    "plan": "Basic",
+    "amount": "0 USD /Month",
+    "title": "It’s Free, Try out skills-based hiring From Now.",
+    "facilities": [
+      "5 Assessment Invitations Per Month",
+      "Change Plan for extra Candidates",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support"
+    ]
+  },
+  {
+    "plan": "Premium",
+    "amount": "100 USD /Month",
+    "title": "Great for Medium teams looking to hire best talent, faster.",
+    "facilities": [
+      "5 Assessment Invitations Per Month",
+      "Change Plan for extra Candidates",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support"
+    ]
+  },
+  {
+    "plan": "Business",
+    "amount": "450 USD /Month",
+    "title": "Great for Bigger teams looking to hire best talent, faster.",
+    "facilities": [
+      "5 Assessment Invitations Per Month",
+      "Change Plan for extra Candidates",
+      "Standard Test Library",
+      "Custom Test Configuration",
+      "Realistic Simulation Tests",
+      "Validated Content",
+      "24/7 Live Support"
+    ]
+  }
+]
