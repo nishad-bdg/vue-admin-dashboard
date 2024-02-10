@@ -53,13 +53,14 @@ const showDropdown = ref(false)
   flex: row;
   align-items: center;
   column-gap: 10px;
-  font-weight: 700;
-  font-size: 19.34px !important;
   line-height: 29.01px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
 }
 
+.user-info p {
+  font-weight: 700;
+  font-size: 19.34px;
+}
 .user-info p span {
   font-weight: 400;
 }
