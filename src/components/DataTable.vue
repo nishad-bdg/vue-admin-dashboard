@@ -33,11 +33,13 @@
             <span v-if="column.key !== 'action' && column.key !== 'status'">
               {{ row[column.key] }}
             </span>
-            
+
             <span v-if="column.key === 'status'">
               <Badge :status="row[column.key]" />
             </span>
-            <span v-if="column.key === 'action'"><IconTableDownload style="cursor: pointer" /></span>
+            <span v-if="column.key === 'action'"
+              ><IconTableDownload style="cursor: pointer"
+            /></span>
           </td>
         </tr>
       </tbody>
@@ -46,11 +48,25 @@
     <div class="pagination">
       <div class="results">Showing 1 to 20 of 77 entries</div>
       <div>
-        <button :disabled="currentPage === 1" @click="currentPage -= 1">Previous</button>
-        <button v-for="page in totalPages" :key="page" @click="currentPage = page">
+        <button :disabled="currentPage === 1" @click="currentPage -= 1" class="btnPagination">
+          Previous
+        </button>
+        <button
+          v-for="page in totalPages"
+          :key="page"
+          @click="currentPage = page"
+          class="btn-pages"
+          :class="currentPage === page && 'btn-current-page'"
+        >
           {{ page }}
         </button>
-        <button :disabled="currentPage === totalPages" @click="currentPage += 1">Next</button>
+        <button
+          :disabled="currentPage === totalPages"
+          @click="currentPage += 1"
+          class="btnPagination"
+        >
+          Next
+        </button>
       </div>
     </div>
   </div>
@@ -102,8 +118,6 @@ const sortedData = computed(() => {
     return 0
   })
 })
-
-console.info(sortedData)
 
 const filteredData = computed(() => {
   if (!searchQuery.value) return sortedData.value
@@ -231,5 +245,30 @@ tr {
   background-repeat: no-repeat;
   background-position: right 10px top 50%;
   cursor: pointer;
+}
+.btnPagination {
+  border-style: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--theme-text-green);
+}
+
+.btnPagination:disabled {
+  color: var(--theme-text-gray);
+}
+
+.btn-pages {
+  border-style: none;
+  background: none;
+  color: var(--theme-text-gray);
+  font-size: 14px;
+  font-weight: 400;
+}
+.btn-current-page {
+  border: 1px solid var(--theme-text-green);
+  color: var(--theme-text-green);
+  border-radius: 7px;
+  padding: 8px 12px;
 }
 </style>

@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
 import SideBar from '@/components/SideBar.vue'
 import Tab from '@/components/TabBar.vue'
+import Footer from './components/Footer.vue'
 import router from './router'
 const tabs = [
   {
@@ -29,5 +30,6 @@ const onCurrentTab = (index) => {
   <main class="main">
     <Tab :tabs="tabs" @current-tab="onCurrentTab" />
     <RouterView />
+    <Footer />
   </main>
 </template>
