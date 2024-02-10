@@ -7,7 +7,7 @@
         <span>Download All</span>
       </button>
     </div>
-    <DataTable />
+    <DataTable :data="tableData" :columns="columns" />
   </Card>
 </template>
 
@@ -15,6 +15,19 @@
 import Card from './Card.vue'
 import DataTable from './DataTable.vue'
 import IconDownload from './icons/IconDownload.vue'
+
+defineProps({
+  tableData: {
+    type: Array,
+    default: () => [],
+    required: true
+  },
+  columns: {
+    type: Array,
+    default: () => [],
+    required: true
+  }
+})
 </script>
 
 <style scoped>
@@ -35,22 +48,21 @@ import IconDownload from './icons/IconDownload.vue'
   border-radius: 8px;
   background-color: transparent;
   font-size: 14px;
-	padding: 10px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-	column-gap: 8px;
-	color: var(--theme-text-gray-600);
+  column-gap: 8px;
+  color: var(--theme-text-gray-600);
 }
 
 .outline-btn span {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .outline-btn:hover {
-	background: var(--theme-text-green);
-	color: var(--theme-text-white);;
-	
+  background: var(--theme-text-green);
+  color: var(--theme-text-white);
 }
 </style>

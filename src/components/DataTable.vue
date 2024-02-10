@@ -37,7 +37,7 @@
     </table>
 
     <div class="pagination">
-      <div class="results">Total {{ paginatedData.length }}</div>
+      <div class="results">Showing 1 to 20 of 77 entries</div>
       <div>
         <button :disabled="currentPage === 1" @click="currentPage -= 1">Previous</button>
         <button v-for="page in totalPages" :key="page" @click="currentPage = page">
@@ -52,39 +52,18 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const data = ref([
-  {
-    id: 1,
-    name: 'John Doe',
-    age: 30,
-    email: 'john@example.com',
-    phone: '123456789',
-    address: '123 Street',
-    city: 'New York',
-    country: 'USA'
+const props = defineProps({
+  data: {
+    type: Array,
+    default: () => [],
+    required: true
   },
-  {
-    id: 2,
-    name: 'Jane Smith',
-    age: 25,
-    email: 'jane@example.com',
-    phone: '987654321',
-    address: '456 Avenue',
-    city: 'Los Angeles',
-    country: 'USA'
-  },
-  {
-    id: 3,
-    name: 'Bob Johnson',
-    age: 35,
-    email: 'bob@example.com',
-    phone: '555555555',
-    address: '789 Road',
-    city: 'Chicago',
-    country: 'USA'
+  columns: {
+    type: Array,
+    default: () => [],
+    required: true
   }
-  // More data...
-])
+})
 
 const perPageOptions = [5, 10, 20]
 const perPage = ref(perPageOptions[0])
@@ -92,16 +71,6 @@ const searchQuery = ref('')
 const sortColumn = ref(null)
 const sortOrder = ref('asc')
 const currentPage = ref(1)
-
-const columns = [
-  { key: 'name', label: 'Name' },
-  { key: 'age', label: 'Age' },
-  { key: 'email', label: 'Email' },
-  { key: 'phone', label: 'Phone' },
-  { key: 'address', label: 'Address' },
-  { key: 'city', label: 'City' },
-  { key: 'country', label: 'Country' }
-]
 
 const sortBy = (column) => {
   if (sortColumn.value === column) {
@@ -113,16 +82,19 @@ const sortBy = (column) => {
 }
 
 const sortedData = computed(() => {
-  let sorted = [...data.value]
-  if (sortColumn.value) {
-    sorted = sorted.sort((a, b) => {
-      const aValue = a[sortColumn.value]
-      const bValue = b[sortColumn.value]
-      return sortOrder.value === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue)
-    })
+  if (!sortColumn.value) {
+    return props.data
   }
-  return sorted
+  return props.data.slice().sort((a, b) => {
+    const aValue = a[sortColumn.value]
+    const bValue = b[sortColumn.value]
+    if (aValue < bValue) return sortOrder.value === 'asc' ? -1 : 1
+    if (aValue > bValue) return sortOrder.value === 'asc' ? 1 : -1
+    return 0
+  })
 })
+
+console.info(sortedData)
 
 const filteredData = computed(() => {
   if (!searchQuery.value) return sortedData.value
@@ -160,6 +132,10 @@ table {
 thead,
 th {
   background: var(--theme-background-table);
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--theme-text-gray-600);
 }
 
 th,
@@ -169,8 +145,11 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-th {
-  cursor: pointer;
+tbody,
+tr {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--theme-text-gray-600);
 }
 
 .pagination {
@@ -180,9 +159,9 @@ th {
 }
 
 .pagination .results {
-	font-size: 14px;
-	font-weight: 400;
-	color: var(--theme-text-gray)
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--theme-text-gray);
 }
 
 .pagination button {
