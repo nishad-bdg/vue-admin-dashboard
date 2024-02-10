@@ -77,7 +77,7 @@ const onClick = () => {
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--theme-background-menu);
-  border-radius: 16px;
+  border-radius: var(--border-radius-lg);
   height: 200px;
 }
 

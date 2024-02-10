@@ -25,7 +25,7 @@ const isRejected = computed(() => props.status.toLowerCase() === 'rejected')
   display: inline-flex;
   align-items: center;
   text-align: center;
-  border-radius: 16px;
+  border-radius: var(--border-radius-lg);
   column-gap: 6px;
   padding: 4px 8px;
 }

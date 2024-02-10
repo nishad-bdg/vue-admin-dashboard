@@ -9,7 +9,7 @@
 <style scoped>
 .card {
   width: 100%;
-  border-radius: 16px;
+  border-radius: var(--border-radius-lg);
   padding: 24px;
   background: var(--theme-text-white);
 }
