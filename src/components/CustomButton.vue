@@ -51,7 +51,6 @@ const computedClasses = computed(() => [
   color: #fff;
 }
 
-
 .btn-small {
   font-size: 0.8rem;
 }
@@ -64,8 +63,21 @@ const computedClasses = computed(() => [
 }
 
 .btn-large {
-  font-size: 1.2rem;
+  border-radius: 17.16px;
+  width: 271.73px;
+  height: 57.21px;
+  font-size: 22.88px;
+  font-weight: 600;
 }
+
+.btn-xlarge {
+  font-size: 25.82px;
+  font-weight: 600;
+  width: 306.61px;
+  height: 64.55px;
+  border-radius: 19.36px;
+}
+
 
 .btn-disabled {
   opacity: 0.5;

@@ -9,6 +9,8 @@
       <p>{{ title }}</p>
       <ListItems :items="facilities" />
     </div>
+
+    <slot></slot>
   </div>
 </template>
 
@@ -46,6 +48,7 @@ defineProps({
   height: 602.43px;
   border-radius: 28.6px;
   align-items: center;
+  padding-bottom: 20px;
   /* -webkit-box-shadow: -6px 10px 57px 0px var(--theme-background-price-table);
   -moz-box-shadow: -6px 10px 57px 0px var(--theme-background-price-table);
   box-shadow: -6px 10px 57px 0px var(--theme-background-price-table); */
@@ -96,6 +99,7 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-grow: 1;
 }
 
 .table-body p {

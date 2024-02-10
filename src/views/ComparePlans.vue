@@ -21,7 +21,21 @@
         :active="index === activeTable"
         @mouseover="activeTable = index"
         @mouseleave="activeTable = 1"
-      />
+      >
+        <CustomButton
+          v-if="index === 1"
+          variant="primary"
+          :size="index === activeTable ? 'xlarge' : 'large'"
+          disabled
+          >Current</CustomButton
+        >
+        <CustomButton
+          v-if="index === 2"
+          variant="primary"
+          :size="index === activeTable ? 'xlarge' : 'large'"
+          >Upgrade</CustomButton
+        >
+      </PricingTable>
     </div>
   </Card>
 </template>
@@ -33,6 +47,7 @@ import PriceTab from '@/components/PriceTab.vue'
 import PricingTable from '@/components/PricingTable.vue'
 import { pricingTableStore } from '@/stores/pricingTable'
 import { CURRENCY_OPTIONS, PERIOD_OPTIONS } from '@/constants/global'
+import CustomButton from '@/components/CustomButton.vue'
 
 const pricingTableStoreData = pricingTableStore()
 const pricingDataItems = ref(pricingTableStoreData.dataInBdt)
