@@ -102,7 +102,7 @@ defineProps({
 .table-body p {
   padding: 10px 20px;
   text-align: center;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   font-size: 1rem;
 }
 </style>

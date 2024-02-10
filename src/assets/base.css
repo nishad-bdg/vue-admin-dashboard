@@ -30,6 +30,7 @@
 :root {
   --border-radius-md: 8px;
   --border-radius-lg: 16px;
+  --font-weight-600: 600;
 }
 
 *,

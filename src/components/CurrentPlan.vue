@@ -65,11 +65,11 @@ const onClick = () => {
 }
 
 .card-title {
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   font-size: 24px;
 }
 .card-header {
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   font-size: 24px;
 }
 
@@ -92,12 +92,12 @@ const onClick = () => {
 
 .amount h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .amount p {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .amount-title {
@@ -139,6 +139,6 @@ const onClick = () => {
 }
 .circle span {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 </style>

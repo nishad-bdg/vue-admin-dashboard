@@ -262,7 +262,7 @@ tr {
   padding: 7px 16px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   color: var(--theme-text-sub-heading);
   appearance: none;
   background-image: url('@/assets/icons/select-down-arrow.svg');
@@ -274,7 +274,7 @@ tr {
   border-style: none;
   background: none;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   color: var(--theme-text-green);
   cursor: pointer;
 }

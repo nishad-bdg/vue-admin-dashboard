@@ -32,7 +32,7 @@
 
 .heading-xs {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .md-regular {

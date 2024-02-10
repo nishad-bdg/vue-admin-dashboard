@@ -57,7 +57,7 @@ const computedClasses = computed(() => [
 
 .btn-medium {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   width: 116px;
   height: 42px;
 }
@@ -67,12 +67,12 @@ const computedClasses = computed(() => [
   width: 271.73px;
   height: 57.21px;
   font-size: 22.88px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .btn-xlarge {
   font-size: 25.82px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
   width: 306.61px;
   height: 64.55px;
   border-radius: 19.36px;

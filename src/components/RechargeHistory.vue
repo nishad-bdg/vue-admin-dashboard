@@ -48,7 +48,7 @@ defineProps({
 
 .card-header h2 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 .outline-btn {
   width: 140px;
@@ -67,7 +67,7 @@ defineProps({
 }
 
 .outline-btn span {
-  font-weight: 600;
+  font-weight: var(--font-weight-600);
 }
 
 .outline-btn:hover {
