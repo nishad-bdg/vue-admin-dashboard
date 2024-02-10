@@ -49,9 +49,6 @@ defineProps({
   border-radius: 28.6px;
   align-items: center;
   padding-bottom: 20px;
-  /* -webkit-box-shadow: -6px 10px 57px 0px var(--theme-background-price-table);
-  -moz-box-shadow: -6px 10px 57px 0px var(--theme-background-price-table);
-  box-shadow: -6px 10px 57px 0px var(--theme-background-price-table); */
 }
 
 .pricing-table .active {
