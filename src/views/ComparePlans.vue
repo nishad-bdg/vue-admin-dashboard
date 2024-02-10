@@ -10,7 +10,7 @@
       <PriceTab :items="PERIOD_OPTIONS" @tab-click="tabClickPeriod" />
     </div>
 
-    <div class="pricing-table">
+    <div class="pricing-table-container">
       <PricingTable
         v-for="(item, index) in pricingDataItems"
         :key="index"
@@ -110,11 +110,10 @@ watch(
   gap: 20px;
   margin-top: 2.5rem;
 }
-.pricing-table {
+.pricing-table-container {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  column-gap: 20px;
-  row-gap: 10px;
+  gap: 20px;
 }
 </style>

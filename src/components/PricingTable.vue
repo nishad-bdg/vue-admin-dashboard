@@ -40,6 +40,7 @@ defineProps({
 </script>
 <style scoped>
 .pricing-table {
+  gap: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -59,13 +60,13 @@ defineProps({
   border: 2px solid var(--theme-text-green);
 }
 
-.pricing-table .active {
+.active {
   width: 370px;
   height: 692px;
   border: 2px solid var(--theme-text-green);
 }
 
-.pricing-table .active .table-header {
+.active .table-header {
   background: var(--theme-text-gray-600);
   color: var(--theme-background-price-table);
   border-radius: 26.6px 26.6px 0px 0px;
