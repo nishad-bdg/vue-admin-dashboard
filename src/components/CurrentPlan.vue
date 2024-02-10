@@ -1,5 +1,5 @@
 <template>
-  <Card class="card-content">
+  <Card class="card-container">
     <h2 class="card-title">Current Plan</h2>
 
     <div class="main-card">
@@ -55,7 +55,7 @@ const onClick = () => {
 </script>
 
 <style scoped>
-.card-content {
+.card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
