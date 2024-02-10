@@ -54,7 +54,7 @@
         Showing {{ startEntry }} to {{ endEntry }} of {{ totalEntries }} entries
       </div>
       <div>
-        <button :disabled="currentPage === 1" @click="currentPage -= 1" class="btnPagination">
+        <button :disabled="currentPage === 1" @click="currentPage -= 1" class="btn-pagination">
           Previous
         </button>
         <button
@@ -69,7 +69,7 @@
         <button
           :disabled="currentPage === totalPages"
           @click="currentPage += 1"
-          class="btnPagination"
+          class="btn-pagination"
         >
           Next
         </button>
@@ -270,15 +270,16 @@ tr {
   background-position: right 10px top 50%;
   cursor: pointer;
 }
-.btnPagination {
+.btn-pagination {
   border-style: none;
   background: none;
   font-size: 14px;
   font-weight: 600;
   color: var(--theme-text-green);
+  cursor: pointer;
 }
 
-.btnPagination:disabled {
+.btn-pagination:disabled {
   color: var(--theme-text-gray);
 }
 
@@ -288,12 +289,14 @@ tr {
   color: var(--theme-text-gray);
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 .btn-current-page {
   border: 1px solid var(--theme-text-green);
   color: var(--theme-text-green);
   border-radius: 7px;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 .table-head {
